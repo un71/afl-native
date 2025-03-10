@@ -1,9 +1,11 @@
 import { Text, View } from "react-native";
 
-export default () => {
+const NotFound = () => {
   return (
     <View>
       <Text>Not Found</Text>
     </View>
   );
 };
+
+export default NotFound;

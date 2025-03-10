@@ -1,9 +1,8 @@
 import { HapticTab } from "@/components/HapticTab";
 import { Tabs } from "expo-router";
 import React from "react";
-import { Platform } from "react-native";
 
-export default function TabLayout() {
+const TabLayout = () => {
   return (
     <Tabs
       screenOptions={{
@@ -11,15 +10,16 @@ export default function TabLayout() {
         headerShown: false,
         tabBarButton: HapticTab,
         tabBarBackground: undefined,
-        tabBarStyle: Platform.select({
-          ios: {
-            position: "absolute",
-            backgroundColor: "#0A090B",
-          },
-          default: {
-            backgroundColor: "#0A090B",
-          },
-        }),
+        tabBarStyle: {
+          backgroundColor: "#0A090B",
+          borderTopColor: "#0A090B",
+          borderTopWidth: 0,
+        },
+        tabBarLabelStyle: {
+          fontSize: 11,
+          fontWeight: "600",
+          lineHeight: 12,
+        },
       }}
     >
       <Tabs.Screen
@@ -37,7 +37,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="matches"
         options={{
-          title: "Турниры",
+          title: "Матчи",
         }}
       />
       <Tabs.Screen
@@ -48,4 +48,6 @@ export default function TabLayout() {
       />
     </Tabs>
   );
-}
+};
+
+export default TabLayout;

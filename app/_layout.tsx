@@ -7,7 +7,7 @@ import "../global.css";
 
 SplashScreen.preventAutoHideAsync();
 
-export default () => {
+const Layout = () => {
   const [loaded] = useFonts({
     SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
   });
@@ -32,3 +32,5 @@ export default () => {
     </>
   );
 };
+
+export default Layout;
