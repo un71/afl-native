@@ -3,9 +3,9 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 export default () => {
   return (
-    <SafeAreaView className="bg-black flex-1 justify-center items-center">
+    <SafeAreaView>
       <View>
-        <Text className="text-white">Главная</Text>
+        <Text>Турниры</Text>
       </View>
     </SafeAreaView>
   );
